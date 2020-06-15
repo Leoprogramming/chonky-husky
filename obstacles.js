@@ -15,7 +15,7 @@ class Obstacles {
     let bottomSide = this.y + this.height;
     let playerTopSide = player.y;
     let playerBottomSide = player.y + player.height;
-    //console.log(leftSide, playerLeftSide, playerRightSide);
+
     let xCollision =
       leftSide > playerLeftSide - 10 &&
       leftSide < playerRightSide + 10 &&
@@ -27,8 +27,7 @@ class Obstacles {
       topSide < playerBottomSide + 10 &&
       bottomSide > playerTopSide - 10 &&
       bottomSide < playerBottomSide + 10;
-    /*       playerLeftSide > leftSide > playerRightSide &&
-      playerLeftSide > rightSide > playerRightSide; */
+
     if (yCollision && xCollision) {
       return true;
     } else {

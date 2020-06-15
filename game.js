@@ -10,13 +10,9 @@ class Game {
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 1 },
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 2 },
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 3 },
-      // { src: loadImage("/assets/background/plx-2.png"), x: 0, speed: 1 },
-      // { src: loadImage("/assets/background/plx-3.png"), x: 0, speed: 2 },
-      // { src: loadImage("/assets/background/plx-4.png"), x: 0, speed: 3 },
-      // { src: loadImage("/assets/background/plx-5.png"), x: 0, speed: 4 },
     ];
     this.playerImg = loadImage("assets/player/husky.gif");
-    this.coinImg = loadImage("assets/coins/bone-small-2.gif");
+    this.coinImg = loadImage("assets/coins/bone-small.gif");
   }
   setup() {
     this.player.setupPlayer();
@@ -25,17 +21,14 @@ class Game {
     clear();
     // this is the framerate we want our game to run
     frameRate(20);
-    // console.log("This is already drawing!");
     this.background.drawingBackground();
     this.player.drawingThePlayer();
     //this.obstacles.drawingObstacles();
     // frameCount is a p5 variable that counts all of the loops/frames that the game is doing or having.
-    // console.log(frameCount);
     if (frameCount % 20 === 0) {
       //random function from p5
       let randomNumber = random(0, height - 60);
       this.obstacles.push(new Obstacles(randomNumber));
-      //console.log(this.obstacles);
     }
     this.obstacles.forEach((elem) => {
       // we draw all of the obstacles
@@ -50,7 +43,6 @@ class Game {
       } else {
         // here we keep the obstacles
         console.log(" not colliding");
-
         return true;
       }
     });
