@@ -12,7 +12,7 @@ class Game {
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 3 },
     ];
     this.playerImg = loadImage("assets/player/husky.gif");
-    this.coinImg = loadImage("assets/coins/bone-small.gif");
+    this.treatImg = loadImage("assets/treats/bone-small.gif");
   }
   setup() {
     this.player.setupPlayer();

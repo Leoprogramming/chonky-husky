@@ -4,6 +4,7 @@ class Player {
     this.speed = 0;
     this.jumps = 0;
     this.x = 50;
+    // this.jumpSound = loadSound("/assets/jump-sound.mp3", loaded)
   }
   setupPlayer() {
     //here i am setting some variables based on the images height and width
@@ -12,7 +13,14 @@ class Player {
     this.height = game.playerImg.height;
   }
   jump() {
+    // this.jumpSound.play();
+    // song.play();
     this.jumps += 1;
+    console.log(this.y);
+    
+    if (this.y > 640) {
+      song.play();
+    }
 
     // check how many times the player before touching the ground
     if (this.jumps < 2) {
