@@ -36,13 +36,9 @@ class Game {
       elem.checkCollision(this.player);
     });
     this.obstacles = this.obstacles.filter((obstacle) => {
-      // here we check if the collision is happening, and if it is happenind we return false to filter the obstacle :D
       if (obstacle.checkCollision(this.player)) {
-        console.log("happening");
         return false;
       } else {
-        // here we keep the obstacles
-        console.log(" not colliding");
         return true;
       }
     });

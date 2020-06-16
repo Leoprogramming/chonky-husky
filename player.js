@@ -19,6 +19,14 @@ class Player {
       this.speed = -5;
     }
   }
+
+  moveRight() {
+    this.x += 20;
+  }
+
+  moveLeft() {
+    this.x -= 20;
+  }
   drawingThePlayer() {
     //gravity pushes poor antonio down in the canvas
     this.speed += this.gravity;
