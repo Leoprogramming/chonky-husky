@@ -13,8 +13,6 @@ class Player {
     this.height = game.playerImg.height;
   }
   jump() {
-    // this.jumpSound.play();
-    // song.play();
     this.jumps += 1;
     console.log(this.y);
     
@@ -36,7 +34,6 @@ class Player {
     this.x -= 20;
   }
   drawingThePlayer() {
-    //gravity pushes poor antonio down in the canvas
     this.speed += this.gravity;
     this.y += this.speed;
     // this if statement is to check that gravity doesn't affect the Husky if he is outside of the canvas
@@ -45,7 +42,6 @@ class Player {
       //we set the jumps to 0 so we can jump again
       this.jumps = 0;
     }
-
     image(game.playerImg, this.x, this.y);
   }
 }

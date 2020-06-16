@@ -1,3 +1,56 @@
-/* body {
-  color: red;
+h1 {
+  font-family: Garamond, Helvetica, sans-serif;
+  color: #214e5b;
+}
+
+h2 {
+  font-family: Garamond, Helvetica, sans-serif;
+  color: #214e5b;
+}
+
+.background {
+  background-image: url("/assets/background/3.jpg");
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .title {
+  display: flex;
+  justify-content: left;
+}
+
+.game-over {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  height: 550px;
+  float: right;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  margin-right: 0px;
+}
+
+.game-start {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 450px;
+  float: right;
+  width: 50%;
+  margin-left: 50%;
+  text-align: right;
+  margin-right: 0px;
+}
+
+.start-text {
+  padding-right: 20px;
+}
+
+.over-message {
+  padding-top: 10px;
 } */

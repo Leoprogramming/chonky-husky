@@ -4,19 +4,23 @@ class Game {
     this.player = new Player();
     this.obstacles = [];
   }
+  
   preloadGame() {
     this.backgroundImgs = [
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 0 },
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 1 },
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 2 },
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 3 },
+      { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 4 },
     ];
     this.playerImg = loadImage("assets/player/husky.gif");
     this.treatImg = loadImage("assets/treats/bone-small.gif");
   }
+
   setup() {
     this.player.setupPlayer();
   }
+
   drawingGame() {
     clear();
     // this is the framerate we want our game to run
@@ -30,11 +34,17 @@ class Game {
       let randomNumber = random(0, height - 60);
       this.obstacles.push(new Obstacles(randomNumber));
     }
+    
     this.obstacles.forEach((elem) => {
       // we draw all of the obstacles
       elem.drawingObstacles();
       elem.checkCollision(this.player);
+      // if (elem.checkCollision(player)) {
+        // console.log("Testing collision");
+        
+      // }
     });
+    
     this.obstacles = this.obstacles.filter((obstacle) => {
       if (obstacle.checkCollision(this.player)) {
         return false;
