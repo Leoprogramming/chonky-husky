@@ -3,6 +3,7 @@ class Game {
     this.background = new Background();
     this.player = new Player();
     this.obstacles = [];
+    this.chocolate = [];
   }
   
   preloadGame() {
@@ -16,6 +17,7 @@ class Game {
     this.playerImg = loadImage("assets/player/husky-loop.gif");
     this.playerImg2 = loadImage("assets/player/husky-fat-small.jpg");
     this.treatImg = loadImage("/assets/treats/treat-small.png");
+    this.badTreatImg = loadImage("/assets/treats/bad-treat.png");
   }
 
   setup() {
@@ -44,6 +46,28 @@ class Game {
     
     this.obstacles = this.obstacles.filter((obstacle) => {
       if (obstacle.checkCollision(this.player)) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+
+
+    
+    if (frameCount % 20 === 0) {
+      //random function from p5
+      let randomNumber = random(0, height - 60);
+      this.chocolate.push(new Chocolate(randomNumber));
+    }
+    
+    this.chocolate.forEach((elem) => {
+      // we draw all of the chocolate
+      elem.drawingChocolate();
+      elem.checkCollision(this.player);
+    });
+    
+    this.chocolate = this.chocolate.filter((chocolate) => {
+      if (chocolate.checkCollision(this.player)) {
         return false;
       } else {
         return true;

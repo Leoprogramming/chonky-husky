@@ -1,6 +1,7 @@
 const game = new Game();
 let song;
 let points = 0;
+let lives = 3;
 function preload() {
   game.preloadGame();
 }
@@ -13,12 +14,19 @@ function setup() {
 }
 
 function draw() {
-  game.drawingGame();
-  console.log(points);
-  document.querySelector("#score").innerText = points;
-  if (points > 0) {
-    game.playerImg = game.playerImg2;
-    // console.log("Changing Image");
+  if (lives > 0) {
+    console.log(game.chocolate.width, game.chocolate);
+    
+    game.drawingGame();
+    console.log(lives);
+    document.querySelector("#score").innerText = points;
+      if (points > 0) {
+        game.playerImg = game.playerImg2;
+        // console.log("Changing Image");
+      }
+    } else {
+      console.log("Game Over!");
+      noLoop();
   }
 }
 

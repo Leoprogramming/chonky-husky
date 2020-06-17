@@ -1,4 +1,4 @@
-class Obstacles {
+class Chocolate {
   constructor(randomY) {
     this.x = width;
     this.y = randomY;
@@ -32,7 +32,8 @@ class Obstacles {
       bottomSide < playerBottomSide + 10;
 
     if (yCollision && xCollision) {
-      points += 5;
+      // points += 5;
+      lives -= 0.5;
       console.log(this.score);
       return true; 
     } else {
@@ -40,8 +41,8 @@ class Obstacles {
     }
   }
 
-  drawingObstacles() {
+  drawingChocolate() {
     this.x -= 2;
-    image(this.img, this.x, this.y, this.width, this.height);
+    image(this.imgBad, this.x, this.y, this.width, this.height);
   }
 }
