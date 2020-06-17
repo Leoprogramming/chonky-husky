@@ -30,9 +30,9 @@ class Obstacles {
       bottomSide < playerBottomSide + 10;
 
     if (yCollision && xCollision) {
-      return true;
-      this.score += 10;
+      points += 5;
       console.log(this.score);
+      return true;
       
     } else {
       return false;
