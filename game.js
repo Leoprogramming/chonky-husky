@@ -15,7 +15,7 @@ class Game {
     ];
     this.playerImg = loadImage("assets/player/husky.gif");
     this.playerImg2 = loadImage("assets/player/husky-fat-small.jpg");
-    this.treatImg = loadImage("assets/treats/bone-small.gif");
+    this.treatImg = loadImage("/assets/treats/treat-small.png");
   }
 
   setup() {

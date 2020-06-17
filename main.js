@@ -19,7 +19,6 @@ function draw() {
   if (points > 0) {
     game.playerImg = game.playerImg2;
     // console.log("Changing Image");
-    
   }
 }
 
