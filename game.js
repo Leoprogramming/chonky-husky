@@ -14,6 +14,7 @@ class Game {
       { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 4 },
     ];
     this.playerImg = loadImage("assets/player/husky.gif");
+    this.playerImg2 = loadImage("assets/player/husky-fat-small.jpg");
     this.treatImg = loadImage("assets/treats/bone-small.gif");
   }
 
@@ -39,10 +40,6 @@ class Game {
       // we draw all of the obstacles
       elem.drawingObstacles();
       elem.checkCollision(this.player);
-      // if (elem.checkCollision(player)) {
-        // console.log("Testing collision");
-        
-      // }
     });
     
     this.obstacles = this.obstacles.filter((obstacle) => {

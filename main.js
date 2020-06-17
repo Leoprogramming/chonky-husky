@@ -1,8 +1,6 @@
 const game = new Game();
 let song;
 let points = 0;
-// let score = 0;
-// these three function are p5 created and they are being called from p5 library! :)
 function preload() {
   game.preloadGame();
 }
@@ -15,12 +13,15 @@ function setup() {
 }
 
 function draw() {
-  // document.querySelector(".hiscore").innerText = hiScoreCounter;
   game.drawingGame();
   console.log(points);
   document.querySelector("#score").innerText = points;
+  if (points > 0) {
+    game.playerImg = game.playerImg2;
+    // console.log("Changing Image");
+    
+  }
 }
-
 
 function keyPressed() {
   if (keyCode == 32) {

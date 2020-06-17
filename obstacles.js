@@ -7,6 +7,7 @@ class Obstacles {
     this.height = this.img.height;
     this.score = 0;
   }
+
   checkCollision(player) {
     let leftSide = this.x;
     let rightSide = this.x + this.width;
@@ -32,8 +33,7 @@ class Obstacles {
     if (yCollision && xCollision) {
       points += 5;
       console.log(this.score);
-      return true;
-      
+      return true; 
     } else {
       return false;
     }

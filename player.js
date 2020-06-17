@@ -22,7 +22,7 @@ class Player {
 
     // check how many times the player before touching the ground
     if (this.jumps < 2) {
-      this.speed = -5;
+      this.speed = -10;
     }
   }
 
