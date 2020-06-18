@@ -4,6 +4,7 @@ let points = 0;
 let lives = 3;
 let bestTime = localStorage.getItem("fastestTime");
 let gameStart = false;
+let finalImage;
 
 if (!bestTime) {
   bestTime = 0;
@@ -11,10 +12,11 @@ if (!bestTime) {
 
 function preload() {
   game.preloadGame();
+  finalImage = loadImage("/assets/background/background-husky.jpg");
 }
 
 function setup() {
-  createCanvas(windowWidth, 500);
+  createCanvas(windowWidth, windowHeight / 1.5);
   game.setup();
   background = new Background();
   song = loadSound("/assets/howl2-trim.mp3");
@@ -23,7 +25,8 @@ function setup() {
 function draw() {
   
  if (gameStart === true) {
-  // console.log(bestTime);
+  document.getElementById("scorebox").style.visibility = "visible";
+  console.log(bestTime);
   
   if (points > bestTime) {
     localStorage.setItem("fastestTime", points);
@@ -38,12 +41,12 @@ function draw() {
       }
     } 
   }
-  if (lives <= 0) {
-    
+  if (lives <=0 ) {
     game.drawingGame();
     game.playerImg = game.playerImg3;
+    image(finalImage, 200, 0);
     setTimeout(() => noLoop(), 500) ;
-    alert("Game Over!");
+    document.querySelector(".game-over").style.visibility = "visible";
     // noLoop();
   }
 }

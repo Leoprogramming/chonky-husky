@@ -1,9 +1,30 @@
 * {
-  background-image: url("/assets/background/background-husky.jpg");
+  /* background-image: url("/assets/background/background-husky.jpg"); */
   display: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.game-start {
+  font-family: Garamond, Helvetica, sans-serif;
+  position: absolute;
+  color: red;
+}
+
+.game-over {
+  font-family: Garamond, Helvetica, sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* top: 50%;
+  left: 50%; */
+  color: green;
+  visibility: hidden;
+}
+
+#scorebox {
+  visibility: hidden;
 }
 
 /* h1 {
@@ -16,6 +37,7 @@
   color: #214e5b;
   padding: none;
 } */
+
 /* 
 .background {
   background-image: url("/assets/background/10.jpeg");
@@ -26,15 +48,3 @@
   display: flex;
   justify-content: space-between;
 } */
-
-.game-start {
-  font-family: Garamond, Helvetica, sans-serif;
-  position: absolute;
-  color: red;
-}
-
-.game-end {
-  font-family: Garamond, Helvetica, sans-serif;
-  position: absolute;
-  color: green;
-}
