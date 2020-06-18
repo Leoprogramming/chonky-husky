@@ -59,6 +59,9 @@ function keyPressed() {
     document.querySelector(".game-start").style.display = "none";
     gameStart = true;
   }
+  if (keyCode === 8) {
+    window.location.reload();
+  }
 }
 
 document.querySelector("#best").innerHTML = bestTime;
