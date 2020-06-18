@@ -2,6 +2,12 @@ const game = new Game();
 let song;
 let points = 0;
 let lives = 3;
+let bestTime = localStorage.getItem("fastestTime");
+
+if (!bestTime) {
+  bestTime = 0;
+}
+
 function preload() {
   game.preloadGame();
 }
@@ -14,15 +20,18 @@ function setup() {
 }
 
 function draw() {
+  console.log(bestTime);
+  
+  if (points > bestTime) {
+    localStorage.setItem("fastestTime", points);
+    document.querySelector("#best").innerHTML = points;
+  }
+
   if (lives > 0) {
-    console.log(game.chocolate.width, game.chocolate);
-    
     game.drawingGame();
-    console.log(lives);
     document.querySelector("#score").innerText = points;
       if (points > 0) {
         game.playerImg = game.playerImg2;
-        // console.log("Changing Image");
       }
     } else {
       console.log("Game Over!");
@@ -41,3 +50,5 @@ function keyPressed() {
     game.player.moveRight();
   }
 }
+
+document.querySelector("#best").innerHTML = bestTime;
