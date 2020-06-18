@@ -21,6 +21,8 @@ function setup() {
 }
 
 function draw() {
+  // console.log(gameStart);
+  
  if (gameStart === true) {
 
   console.log(bestTime);
@@ -37,11 +39,15 @@ function draw() {
       if (points > 0) {
         game.playerImg = game.playerImg2;
       }
-    } else {
-      alert("Game Over!");
-      game.playerImg = game.playerImg3;
-      noLoop();
-    }
+      
+    } 
+  }
+  if(lives<=0){
+    
+    game.drawingGame();
+    game.playerImg = game.playerImg3;
+    setTimeout(() => noLoop(), 500) ;
+    // noLoop();
   }
 }
 

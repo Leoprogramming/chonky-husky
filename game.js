@@ -13,10 +13,6 @@ class Game {
       { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 2 },
       { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 3 },
       { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 4 },
-      // { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 1 },
-      // { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 2 },
-      // { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 3 },
-      // { src: loadImage("/assets/background/background-1.jpg"), x: 0, speed: 4 },
     ];
     this.playerImg = loadImage("assets/player/husky-loop.gif");
     this.playerImg2 = loadImage("assets/player/husky-fat-small.jpg");
@@ -36,7 +32,7 @@ class Game {
     this.background.drawingBackground();
     this.player.drawingThePlayer();
     // frameCount is a p5 variable that counts all of the loops/frames that the game is doing or having.
-    if (frameCount % 20 === 0) {
+    if (frameCount % 60 === 0) {
       //random function from p5
       let randomNumber = random(0, height - 60);
       this.obstacles.push(new Obstacles(randomNumber));
