@@ -16,11 +16,11 @@
   color: #214e5b;
   padding: none;
 } */
-
+/* 
 .background {
-  /* background-image: url("/assets/background/10.jpeg"); */
+  background-image: url("/assets/background/10.jpeg");
   background-size: cover;
-}
+} */
 
 /* .header {
   display: flex;

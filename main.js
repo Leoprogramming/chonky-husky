@@ -14,23 +14,20 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, 500);
   game.setup();
   background = new Background();
   song = loadSound("/assets/howl2-trim.mp3");
 }
 
 function draw() {
-  // console.log(gameStart);
   
  if (gameStart === true) {
-
-  console.log(bestTime);
+  // console.log(bestTime);
   
   if (points > bestTime) {
     localStorage.setItem("fastestTime", points);
     document.querySelector("#best").innerHTML = points;
-    
   }
 
   if (lives > 0) {
@@ -39,14 +36,14 @@ function draw() {
       if (points > 0) {
         game.playerImg = game.playerImg2;
       }
-      
     } 
   }
-  if(lives<=0){
+  if (lives <= 0) {
     
     game.drawingGame();
     game.playerImg = game.playerImg3;
     setTimeout(() => noLoop(), 500) ;
+    alert("Game Over!");
     // noLoop();
   }
 }
