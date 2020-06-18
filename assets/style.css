@@ -1,62 +1,40 @@
-h1 {
-  font-family: Garamond, Helvetica, sans-serif;
-  color: #214e5b;
+* {
+  background-image: url("/assets/background/background-husky.jpg");
+  display: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-h2 {
+/* h1 {
   font-family: Garamond, Helvetica, sans-serif;
   color: #214e5b;
-}
+} */
+
+/* h2 {
+  font-family: Garamond, Helvetica, sans-serif;
+  color: #214e5b;
+  padding: none;
+} */
 
 .background {
-  background-image: url("/assets/background/10.jpeg");
+  /* background-image: url("/assets/background/10.jpeg"); */
   background-size: cover;
 }
 
-.landing-card {
-  background-image: url("/assets/background/main-card.jpg");
-  /* background-size: cover; */
-  /* background-color: red; */
-}
-
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
-}
-
-/* .title {
-  display: flex;
-  justify-content: left;
-}
-
-.game-over {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  height: 550px;
-  float: right;
-  width: 50%;
-  margin-left: 25%;
-  text-align: center;
-  margin-right: 0px;
-}
+} */
 
 .game-start {
-  display: flex;
-  flex-direction: column;
+  font-family: Garamond, Helvetica, sans-serif;
   position: absolute;
-  height: 450px;
-  float: right;
-  width: 50%;
-  margin-left: 50%;
-  text-align: right;
-  margin-right: 0px;
+  color: red;
 }
 
-.start-text {
-  padding-right: 20px;
+.game-end {
+  font-family: Garamond, Helvetica, sans-serif;
+  position: absolute;
+  color: green;
 }
-
-.over-message {
-  padding-top: 10px;
-} */

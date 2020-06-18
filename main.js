@@ -3,6 +3,7 @@ let song;
 let points = 0;
 let lives = 3;
 let bestTime = localStorage.getItem("fastestTime");
+let gameStart = false;
 
 if (!bestTime) {
   bestTime = 0;
@@ -20,11 +21,14 @@ function setup() {
 }
 
 function draw() {
+ if (gameStart === true) {
+
   console.log(bestTime);
   
   if (points > bestTime) {
     localStorage.setItem("fastestTime", points);
     document.querySelector("#best").innerHTML = points;
+    
   }
 
   if (lives > 0) {
@@ -34,8 +38,10 @@ function draw() {
         game.playerImg = game.playerImg2;
       }
     } else {
-      console.log("Game Over!");
+      alert("Game Over!");
+      game.playerImg = game.playerImg3;
       noLoop();
+    }
   }
 }
 
@@ -48,6 +54,10 @@ function keyPressed() {
   }
   if (keyCode == 39) {
     game.player.moveRight();
+  }
+  if (keyCode === 13) {
+    document.querySelector(".game-start").style.display = "none";
+    gameStart = true;
   }
 }
 
