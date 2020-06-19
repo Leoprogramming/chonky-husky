@@ -12,14 +12,14 @@ if (!bestTime) {
 
 function preload() {
   game.preloadGame();
-  finalImage = loadImage("/assets/player/husky-end-big.png");
+  finalImage = loadImage("assets/player/husky-end-big.png");
 }
 
 function setup() {
   createCanvas(windowWidth, 600);
   game.setup();
   background = new Background();
-  song = loadSound("/assets/howl2-trim.mp3");
+  song = loadSound("assets/howl2-trim.mp3");
 }
 
 function draw() {
