@@ -12,7 +12,7 @@ if (!bestTime) {
 
 function preload() {
   game.preloadGame();
-  finalImage = loadImage("assets/player/husky-end-big.png");
+  finalImage = loadImage("assets/player/husky-end-message.png");
 }
 
 function setup() {
