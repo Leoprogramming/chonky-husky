@@ -4,12 +4,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
+  color: steelblue;
 }
 
 .game-start {
   font-family: Garamond, Helvetica, sans-serif;
   position: absolute;
-  color: red;
+  color: steelblue;
 }
 
 .game-over {
