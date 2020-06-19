@@ -28,6 +28,9 @@
   visibility: hidden;
 }
 
+strong {
+  color: maroon;
+}
 /* h1 {
   font-family: Garamond, Helvetica, sans-serif;
   color: #214e5b;
