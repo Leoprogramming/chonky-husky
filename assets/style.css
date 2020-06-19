@@ -10,7 +10,7 @@
 .game-start {
   font-family: Garamond, Helvetica, sans-serif;
   position: absolute;
-  color: steelblue;
+  color: #3E92CC;
 }
 
 .game-over {
@@ -29,7 +29,11 @@
 }
 
 strong {
-  color: maroon;
+  color: #16324F;
+}
+
+h3 {
+  color: #16324F
 }
 /* h1 {
   font-family: Garamond, Helvetica, sans-serif;
