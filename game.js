@@ -8,17 +8,17 @@ class Game {
   
   preloadGame() {
     this.backgroundImgs = [
-      { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 0 },
-      { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 1 },
-      { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 2 },
-      { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 3 },
-      { src: loadImage("/assets/background/background-snow.jpg"), x: 0, speed: 4 },
+      { src: loadImage("assets/background/background-snow.jpg"), x: 0, speed: 0 },
+      { src: loadImage("assets/background/background-snow.jpg"), x: 0, speed: 1 },
+      { src: loadImage("assets/background/background-snow.jpg"), x: 0, speed: 2 },
+      { src: loadImage("assets/background/background-snow.jpg"), x: 0, speed: 3 },
+      { src: loadImage("assets/background/background-snow.jpg"), x: 0, speed: 4 },
     ];
-    this.playerImg = loadImage("/assets/player/husky-loop.gif");
-    this.playerImg2 = loadImage("/assets/player/husky-fat-small.jpg");
-    this.playerImg3 = loadImage("/assets/player/sick-husky.png");
-    this.treatImg = loadImage("/assets/treats/treat-small.png");
-    this.badTreatImg = loadImage("/assets/treats/bad-treat.png");
+    this.playerImg = loadImage("assets/player/husky-loop.gif");
+    this.playerImg2 = loadImage("assets/player/husky-fat-small.jpg");
+    this.playerImg3 = loadImage("assets/player/sick-husky.png");
+    this.treatImg = loadImage("assets/treats/treat-small.png");
+    this.badTreatImg = loadImage("assets/treats/bad-treat.png");
   }
 
   setup() {
