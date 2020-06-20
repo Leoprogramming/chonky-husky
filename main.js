@@ -41,13 +41,12 @@ function draw() {
       }
     } 
   }
-  if (lives <=0 ) {
+  if (lives <= 0) {
     game.drawingGame();
     game.playerImg = game.playerImg3;
     image(finalImage, 200, 0);
     setTimeout(() => noLoop(), 500) ;
     document.querySelector(".game-over").style.visibility = "visible";
-    // noLoop();
   }
 }
 
