@@ -1,5 +1,4 @@
 * {
-  /* background-image: url("/assets/background/background-husky.jpg"); */
   display: auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,8 +17,6 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  /* top: 50%;
-  left: 50%; */
   color: green;
   visibility: hidden;
 }
@@ -35,24 +32,3 @@ strong {
 h3 {
   color: #16324F
 }
-/* h1 {
-  font-family: Garamond, Helvetica, sans-serif;
-  color: #214e5b;
-} */
-
-/* h2 {
-  font-family: Garamond, Helvetica, sans-serif;
-  color: #214e5b;
-  padding: none;
-} */
-
-/* 
-.background {
-  background-image: url("/assets/background/10.jpeg");
-  background-size: cover;
-} */
-
-/* .header {
-  display: flex;
-  justify-content: space-between;
-} */
